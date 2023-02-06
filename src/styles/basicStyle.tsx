@@ -6,8 +6,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    alignItems: "center",
     minHeight: '100vh',
-    padding: theme.spacing(1),
+    padding: theme.spacing(4, 0, 0),
+    [theme.breakpoints.up("md")]: {
+      "& > *": {
+        maxWidth: "900px",
+      },
+    },
   }
 }));
 
