@@ -1,5 +1,6 @@
 import { get } from '@/api';
 import { setCookie } from '@/utils/cookieIO';
+import { decodeJWT } from '@/utils/jwt';
 
 const REGISTER = '/auth/register';
 
