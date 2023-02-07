@@ -2,6 +2,7 @@ import React from 'react';
 import { Box } from '@mui/material';
 import useStyles from '@/styles/basicStyle';
 import Header from '@/components/Header';
+import { RegisterHook } from '@/hooks/authenticationHooks';
 
 interface Props {
   children: React.ReactNode;
@@ -9,6 +10,8 @@ interface Props {
 
 const Layout: React.FC<Props> = ({children}) => {
   const classes = useStyles();
+
+  RegisterHook();
 
   return (
     <Box>

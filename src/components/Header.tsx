@@ -13,7 +13,6 @@ interface Props {
 const Header = ({ numberOfNotifications }: Props) => {
   const classes = useStyles();
   const [notifications, setNotifications] = useState(numberOfNotifications);
-  console.log(notifications);
 
   const handleNotificationClick = () => {
     setNotifications(notifications + 1);
