@@ -5,8 +5,12 @@ import { decodeJWT } from '@/utils/jwt';
 const REGISTER = '/auth/register';
 
 async function register() {
-  const res = await get(REGISTER);
-  setCookie("access_token", res.data.token);
+  try {
+    const res = await get(REGISTER);
+    return res.data.token;
+  } catch(e) {
+    console.error(e);
+  }
 }
 
 export { register };
